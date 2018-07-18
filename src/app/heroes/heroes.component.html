@@ -1,0 +1,12 @@
+<h2>Liste des héros connus :</h2>
+<div class="hero-list">
+	<div class="hero" *ngFor="let hero of heroes; first as isFirstHero">
+		<h4>
+			Héro n°{{ hero.id }}
+			<img class="delete-icon" src="/assets/delete.svg"
+				(click)="deleteHero(hero.id)">
+		</h4>
+		<span class="label">Nom : </span>
+		<span>{{ hero.name }}</span>
+	</div>
+</div>

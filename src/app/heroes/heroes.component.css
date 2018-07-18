@@ -1,0 +1,22 @@
+div.hero-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.hero {
+    font-size: 1.2rem;
+    padding: 0 10px;
+    border: 2px solid darkgoldenrod;
+}
+
+div.hero h4 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+div.hero h4 img {
+    width: 24px;
+    height: 24px;
+    margin-top: -7px;
+    cursor: pointer;
+}
