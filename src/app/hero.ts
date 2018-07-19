@@ -1,5 +1,5 @@
 export class Hero {
-    private static ID_COUNT = 1;
+    private static ID_COUNT = 10;
 
     id: number;
     name: string;

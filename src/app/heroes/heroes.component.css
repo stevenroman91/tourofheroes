@@ -1,5 +1,6 @@
 div.hero-list {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
 }
 
@@ -7,6 +8,8 @@ div.hero {
     font-size: 1.2rem;
     padding: 0 10px;
     border: 2px solid darkgoldenrod;
+    margin: 5px;
+    min-width: 180px;
 }
 
 div.hero h4 {

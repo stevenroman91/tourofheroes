@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
 
 @Component({
 	selector: 'demo-heroes',
@@ -9,14 +10,12 @@ import { Hero } from '../hero';
 export class HeroesComponent implements OnInit {
 	heroes: Array<Hero>;
 
-	constructor() {
+	constructor(private heroService: HeroService) {
 		this.heroes = new Array();
 	}
 
 	ngOnInit() {
-		this.heroes.push(new Hero('Link'));
-		this.heroes.push(new Hero('Zelda'));
-		this.heroes.push(new Hero('Tingle'));
+		this.heroService.heroes.subscribe((list) => this.heroes = list);
 	}
 
 	deleteHero(heroId: number) {
